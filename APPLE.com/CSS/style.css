@@ -187,6 +187,12 @@ a .footnote {
   max-width: 2560px;
   position: relative;
   margin: 0 auto;
+  width: 100%;
+}
+
+.data-module-template,
+.data-unit-id {
+  position: relative;
 }
 
 /* Themes */
@@ -306,7 +312,7 @@ a .footnote {
   }
 }
 
-.module-content {
+.heroes .module-content {
   padding-top: var(--nav-height);
   width: 100%;
   max-width: 2560px;
@@ -317,6 +323,7 @@ a .footnote {
 .heroes {
   border-bottom: 1.2rem solid #fff;
   width: 100%;
+  z-index: 41;
 }
 
 .hero-grid {
@@ -338,7 +345,7 @@ h6 {
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
     "Arial", sans-serif;
 }
-.headline {
+.heroes .headline {
   font-size: 5.6rem;
   line-height: 1.07143;
   font-weight: 600;
@@ -352,13 +359,13 @@ h6 {
 }
 
 @media only screen and (max-width: 1068px) {
-  .headline {
+  .heroes .headline {
     font-size: 4.8rem;
   }
 }
 
 @media only screen and (max-width: 734px) {
-  .headline {
+  .heroes .headline {
     font-size: 3.2rem;
   }
 }
@@ -372,7 +379,7 @@ h6 {
   color: #ffffff;
 }
 
-.subhead {
+.heroes .subhead {
   margin-top: 0.6rem;
   font-size: 2.8rem;
   line-height: 1.10722;
@@ -381,14 +388,14 @@ h6 {
 }
 
 @media only screen and (max-width: 1068px) {
-  .subhead {
+  .heroes .subhead {
     font-size: 2.4rem;
     margin-top: 0.5rem;
   }
 }
 
 @media only screen and (max-width: 734px) {
-  .subhead {
+  .heroes .subhead {
     font-size: 1.9rem;
     margin-top: 0.4rem;
   }
@@ -403,6 +410,7 @@ h6 {
   overflow: hidden;
   position: relative;
   top: -44px;
+  width: 100%;
 }
 
 @media only screen and (max-width: 834px) {
@@ -412,6 +420,7 @@ h6 {
 }
 
 .unit-copy-wrapper {
+  width: 100%;
   z-index: 4;
   padding-top: 55px;
   text-align: center;
@@ -589,7 +598,9 @@ h6 {
 }
 
 /* Series 8 */
-
+.logo-image {
+  margin: 0 auto;
+}
 .visuallyhidden {
   position: absolute;
   /* clip: rect(1px, 1px, 1px, 1px); */
@@ -628,4 +639,321 @@ h6 {
     background-repeat: no-repeat;
     background-image: url("/APPLE.com/images/logo-images/hero_logo_apple_watch_series_8__ezarmmoobhg2_small.png");
   }
+}
+
+/* PROMOS */
+
+.promos {
+  --background-color: #fbfbfd;
+  position: relative;
+  max-width: 2560px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: var(--gutter-width);
+  z-index: 40;
+}
+
+@media only screen and (max-width: 734px) {
+  .promos {
+    grid-template-columns: repeat(1, 1fr);
+    /* grid-template-rows: repeat(6, 1fr); */
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1069px) {
+  .promos .module-content {
+    height: 580px;
+  }
+}
+
+@media screen and (max-width: 1068px) and (min-width: 735px) {
+  .promos .module-content {
+    height: 490px;
+  }
+}
+
+@media screen and (max-width: 1441000px) and (min-width: 1441px) {
+  .promos .module-content {
+    height: 580px;
+  }
+}
+
+@media screen and (max-width: 734px) and (min-width: 0px) {
+  .promos .module-content {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1069px) {
+  .promos {
+    --columns: 2;
+    --content-height: 580px;
+    --double-edge-border-width: 24px;
+    --edge-border-width-fallback: 12px;
+    --edge-border-width: 12px;
+    --gutter-and-half-width: 18px;
+    --gutter-color: #fff;
+    --gutter-half-width: 6px;
+    --gutter-width: 12px;
+    --text-color: #1d1d1f;
+  }
+}
+
+@media screen and (max-width: 1068px) and (min-width: 735px) {
+  .promos {
+    --columns: 2;
+    --content-height: 490px;
+    --double-edge-border-width: 24px;
+    --edge-border-width-fallback: 12px;
+    --edge-border-width: 12px;
+    --gutter-and-half-width: 18px;
+    --gutter-color: #fff;
+    --gutter-half-width: 6px;
+    --gutter-width: 12px;
+    --text-color: #1d1d1f;
+  }
+}
+
+@media screen and (max-width: 1441000px) and (min-width: 1441px) {
+  .promos {
+    --columns: 2;
+    --content-height: 580px;
+    --double-edge-border-width: 24px;
+    --edge-border-width-fallback: 12px;
+    --edge-border-width: 12px;
+    --gutter-and-half-width: 18px;
+    --gutter-color: #fff;
+    --gutter-half-width: 6px;
+    --gutter-width: 12px;
+    --text-color: #1d1d1f;
+  }
+}
+
+@media screen and (max-width: 734px) and (min-width: 0px) {
+  .promos {
+    --columns: 1;
+    --content-height: 500px;
+    --double-edge-border-width: 0px;
+    --edge-border-width-fallback: 0px;
+    --edge-border-width: 0px;
+    --gutter-and-half-width: 18px;
+    --gutter-color: #fff;
+    --gutter-half-width: 6px;
+    --gutter-width: 12px;
+    --text-color: #1d1d1f;
+  }
+}
+
+/* Indexes */
+
+.data-module-template:nth-child(42),
+.data-unit-id:nth-child(42) {
+  z-index: 1;
+}
+
+.data-module-template:nth-child(41),
+.data-unit-id:nth-child(41) {
+  z-index: 2;
+}
+
+.data-module-template:nth-child(40),
+.data-unit-id:nth-child(40) {
+  z-index: 3;
+}
+
+.data-module-template:nth-child(39),
+.data-unit-id:nth-child(39) {
+  z-index: 4;
+}
+
+.data-module-template:nth-child(38),
+.data-unit-id:nth-child(38) {
+  z-index: 5;
+}
+
+.data-module-template:nth-child(37),
+.data-unit-id:nth-child(37) {
+  z-index: 6;
+}
+
+.data-module-template:nth-child(36),
+.data-unit-id:nth-child(36) {
+  z-index: 7;
+}
+
+.data-module-template:nth-child(35),
+.data-unit-id:nth-child(35) {
+  z-index: 8;
+}
+
+.data-module-template:nth-child(34),
+.data-unit-id:nth-child(34) {
+  z-index: 9;
+}
+
+.data-module-template:nth-child(33),
+.data-unit-id:nth-child(33) {
+  z-index: 10;
+}
+
+.data-module-template:nth-child(32),
+.data-unit-id:nth-child(32) {
+  z-index: 11;
+}
+
+.data-module-template:nth-child(31),
+.data-unit-id:nth-child(31) {
+  z-index: 12;
+}
+
+.data-module-template:nth-child(30),
+.data-unit-id:nth-child(30) {
+  z-index: 13;
+}
+
+.data-module-template:nth-child(29),
+.data-unit-id:nth-child(29) {
+  z-index: 14;
+}
+
+.data-module-template:nth-child(28),
+.data-unit-id:nth-child(28) {
+  z-index: 15;
+}
+
+.data-module-template:nth-child(27),
+.data-unit-id:nth-child(27) {
+  z-index: 16;
+}
+
+.data-module-template:nth-child(26),
+.data-unit-id:nth-child(26) {
+  z-index: 17;
+}
+
+.data-module-template:nth-child(25),
+.data-unit-id:nth-child(25) {
+  z-index: 18;
+}
+
+.data-module-template:nth-child(24),
+.data-unit-id:nth-child(24) {
+  z-index: 19;
+}
+
+.data-module-template:nth-child(23),
+.data-unit-id:nth-child(23) {
+  z-index: 20;
+}
+
+.data-module-template:nth-child(22),
+.data-unit-id:nth-child(22) {
+  z-index: 21;
+}
+
+.data-module-template:nth-child(21),
+.data-unit-id:nth-child(21) {
+  z-index: 22;
+}
+
+.data-module-template:nth-child(20),
+.data-unit-id:nth-child(20) {
+  z-index: 23;
+}
+
+.data-module-template:nth-child(19),
+.data-unit-id:nth-child(19) {
+  z-index: 24;
+}
+
+.data-module-template:nth-child(18),
+.data-unit-id:nth-child(18) {
+  z-index: 25;
+}
+
+.data-module-template:nth-child(17),
+.data-unit-id:nth-child(17) {
+  z-index: 26;
+}
+
+.data-module-template:nth-child(16),
+.data-unit-id:nth-child(16) {
+  z-index: 27;
+}
+
+.data-module-template:nth-child(15),
+.data-unit-id:nth-child(15) {
+  z-index: 28;
+}
+
+.data-module-template:nth-child(14),
+.data-unit-id:nth-child(14) {
+  z-index: 29;
+}
+
+.data-module-template:nth-child(13),
+.data-unit-id:nth-child(13) {
+  z-index: 30;
+}
+
+.data-module-template:nth-child(12),
+.data-unit-id:nth-child(12) {
+  z-index: 31;
+}
+
+.data-module-template:nth-child(11),
+.data-unit-id:nth-child(11) {
+  z-index: 32;
+}
+
+.data-module-template:nth-child(10),
+.data-unit-id:nth-child(10) {
+  z-index: 33;
+}
+
+.data-module-template:nth-child(9),
+.data-unit-id:nth-child(9) {
+  z-index: 34;
+}
+
+.data-module-template:nth-child(8),
+.data-unit-id:nth-child(8) {
+  z-index: 35;
+}
+
+.data-module-template:nth-child(7),
+.data-unit-id:nth-child(7) {
+  z-index: 36;
+}
+
+.data-module-template:nth-child(6),
+.data-unit-id:nth-child(6) {
+  z-index: 37;
+}
+
+.data-module-template:nth-child(5),
+.data-unit-id:nth-child(5) {
+  z-index: 38;
+}
+
+.data-module-template:nth-child(4),
+.data-unit-id:nth-child(4) {
+  z-index: 39;
+}
+
+.data-module-template:nth-child(3),
+.data-unit-id:nth-child(3) {
+  z-index: 40;
+}
+
+.data-module-template:nth-child(2),
+.data-unit-id:nth-child(2) {
+  z-index: 41;
+}
+
+.data-module-template:nth-child(1),
+.data-unit-id:nth-child(1) {
+  z-index: 42;
 }
