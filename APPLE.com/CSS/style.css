@@ -13,6 +13,18 @@
   }
 }
 
+@media only screen and (max-width: 734px) {
+  :root {
+    --content-height: 500px;
+  }
+}
+
+@media screen and (max-width: 1068px) and (min-width: 735px) and (max-height: 733px) and (min-height: 0px) {
+  :root {
+    --content-height: 569px;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -40,7 +52,7 @@ body {
     "Arial", sans-serif;
   font-size: 1.7rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.47059;
   margin: 0;
   min-width: 320px;
   padding: 0;
@@ -190,7 +202,7 @@ a .footnote {
 /* Ribbon */
 
 .ribbon {
-  height: var(--nav-height);
+  height: auto;
   text-align: center;
   background: #fff;
   display: flex;
@@ -200,9 +212,10 @@ a .footnote {
 }
 
 .ribbon-text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   display: inline-block;
   margin: 0;
+  padding: 1rem 0;
 }
 
 .ribbon-content {
@@ -211,7 +224,7 @@ a .footnote {
 
 @media only screen and (max-width: 734px) {
   .ribbon {
-    height: 61.1562px;
+    height: auto;
   }
 
   .ribbon-content {
@@ -245,6 +258,13 @@ a .footnote {
   }
 }
 
+@media only screen and (max-width: 734px) {
+  .unit-links {
+    font-size: 1.7rem;
+    margin-top: 1.19rem;
+  }
+}
+
 .unit-copy-wrapper > *.unit-links a:not(:only-child):not(:first-child) {
   margin-left: 3.5rem;
 }
@@ -252,6 +272,12 @@ a .footnote {
 @media only screen and (max-width: 1068px) {
   .unit-copy-wrapper > *.unit-links a:not(:only-child):not(:first-child) {
     margin-left: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .unit-copy-wrapper > *.unit-links a:not(:only-child):not(:first-child) {
+    margin-left: 2.7rem;
   }
 }
 
@@ -270,11 +296,15 @@ a .footnote {
   position: relative;
   top: 0;
   margin-bottom: -5.6rem;
-  height: 704px;
+  height: auto;
   width: 100%;
 }
-/* TODO: Start form here Tomorrow */
-/* @media only screen and (min) */
+
+@media only screen and (max-width: 834px) {
+  #iphone-14-pro {
+    margin-bottom: -6rem;
+  }
+}
 
 .module-content {
   padding-top: var(--nav-height);
@@ -286,6 +316,7 @@ a .footnote {
 
 .heroes {
   border-bottom: 1.2rem solid #fff;
+  width: 100%;
 }
 
 .hero-grid {
@@ -326,6 +357,12 @@ h6 {
   }
 }
 
+@media only screen and (max-width: 734px) {
+  .headline {
+    font-size: 3.2rem;
+  }
+}
+
 .theme-dark h1,
 .theme-dark h2,
 .theme-dark h3,
@@ -350,6 +387,13 @@ h6 {
   }
 }
 
+@media only screen and (max-width: 734px) {
+  .subhead {
+    font-size: 1.9rem;
+    margin-top: 0.4rem;
+  }
+}
+
 /* Unit Copy */
 
 .unit-wrapper {
@@ -361,6 +405,12 @@ h6 {
   top: -44px;
 }
 
+@media only screen and (max-width: 834px) {
+  .unit-wrapper {
+    top: -48px;
+  }
+}
+
 .unit-copy-wrapper {
   z-index: 4;
   padding-top: 55px;
@@ -369,7 +419,13 @@ h6 {
 
 @media only screen and (max-width: 1068px) {
   .unit-copy-wrapper {
-    padding-top: 61px;
+    padding-top: 53px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .unit-copy-wrapper {
+    padding-top: 37px;
   }
 }
 
@@ -400,6 +456,12 @@ h6 {
   transform: translatex(-50%);
 }
 
+@media only screen and (max-width: 734px) {
+  .unit-image {
+    top: -48px;
+  }
+}
+
 /* UNit Image unit-image-iphone-14-pro-hero-iphone14pro-spring */
 
 .unit-image.unit-image-iphone-14-pro-hero-iphone14pro-spring {
@@ -411,6 +473,26 @@ h6 {
 }
 
 @media screen and (max-width: 1068px) {
+  .unit-image.unit-image-iphone-14-pro-hero-iphone14pro-spring {
+    width: 1068px;
+    height: 617px;
+    background-size: 1068px 617px;
+    background-repeat: no-repeat;
+    background-image: url("/APPLE.com/images/units/hero_iphone14pro_spring__9xo85pm6sbmm_medium.jpg");
+  }
+}
+
+@media screen and (max-width: 734px) {
+  .unit-image.unit-image-iphone-14-pro-hero-iphone14pro-spring {
+    width: 734px;
+    height: 548px;
+    background-size: 734px 548px;
+    background-repeat: no-repeat;
+    background-image: url("/APPLE.com/images/units/hero_iphone14pro_spring__9xo85pm6sbmm_small.jpg");
+  }
+}
+
+@media only screen and (max-width: 1068px) and (min-width: 735px) and (min-height: 734px) {
   .unit-image.unit-image-iphone-14-pro-hero-iphone14pro-spring {
     width: 1068px;
     height: 694px;
