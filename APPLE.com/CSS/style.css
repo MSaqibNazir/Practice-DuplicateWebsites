@@ -1,0 +1,421 @@
+:root {
+  /* For Apple */
+  --backdrop-filter: saturate(180%) blur(20px);
+  --columns: 1;
+  --content-height: 692px;
+  --gutter-width: 12px;
+  --nav-height: 44px;
+}
+
+@media screen and (max-width: 1068px) {
+  :root {
+    --content-height: 650px;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+::selection {
+  /* background: var(--color-primary); */
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: rgb(29, 29, 31);
+  display: block;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  min-width: 320px;
+  padding: 0;
+}
+
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hgroup,
+p,
+blockquote,
+figure,
+form,
+fieldset,
+input,
+legend,
+pre,
+abbr,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+.nav {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.nav-bg {
+  position: fixed;
+  z-index: 9999;
+  margin: 0 auto;
+  backdrop-filter: var(--backdrop-filter);
+  background: rgba(22, 22, 23, 0.8);
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 0 1.6rem;
+  justify-content: center;
+  width: 100%;
+}
+.nav-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--nav-height);
+  max-width: 1024px;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 833px) {
+  :root {
+    --nav-height: 48px;
+  }
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item > a {
+  padding: 0 1rem;
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width: 834px) {
+  .nav_hidden {
+    display: none;
+  }
+  .nav-content {
+    justify-content: flex-end;
+    transition: justify-content 0.4s;
+  }
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:visited .footnote {
+  color: #06c;
+}
+
+a .footnote {
+  color: #06c;
+}
+/* Icons */
+
+.icon {
+  height: 1.6rem;
+  width: 1.6rem;
+  fill: #dadada;
+  transition: fill 0.3s;
+}
+
+.icon:hover {
+  fill: #fff;
+}
+
+/* Main Body */
+.main {
+  padding-top: var(--nav-height);
+  max-width: 2560px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Themes */
+.theme-dark {
+  background-color: rgb(0, 0, 0);
+  color: rgb(245, 245, 247);
+}
+
+.theme-dark a {
+  color: #2997ff;
+}
+
+/* Ribbon */
+
+.ribbon {
+  height: var(--nav-height);
+  text-align: center;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.ribbon-text {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin: 0;
+}
+
+.ribbon-content {
+  box-sizing: content-box;
+}
+
+@media only screen and (max-width: 734px) {
+  .ribbon {
+    height: 61.1562px;
+  }
+
+  .ribbon-content {
+    width: 87.5%;
+    max-width: 405px;
+  }
+}
+
+/* Links */
+.links {
+  color: #06c;
+  letter-spacing: 0.05rem;
+}
+
+.links:hover {
+  text-decoration: underline;
+}
+
+.unit-links {
+  margin-top: 1.36rem;
+  font-size: 2.1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 1068px) {
+  .unit-links {
+    font-size: 1.9rem;
+    margin-top: 1.406rem;
+  }
+}
+
+.unit-copy-wrapper > *.unit-links a:not(:only-child):not(:first-child) {
+  margin-left: 3.5rem;
+}
+
+@media only screen and (max-width: 1068px) {
+  .unit-copy-wrapper > *.unit-links a:not(:only-child):not(:first-child) {
+    margin-left: 3.2rem;
+  }
+}
+
+.icon-chevronRight::after {
+  content: ">";
+  padding-left: 0.5rem;
+  text-decoration: none;
+}
+.icon-chevronRight::after:hover {
+  text-decoration: none;
+}
+
+/* Heroes */
+
+#iphone-14-pro {
+  position: relative;
+  top: 0;
+  margin-bottom: -5.6rem;
+  height: 704px;
+  width: 100%;
+}
+/* TODO: Start form here Tomorrow */
+/* @media only screen and (min) */
+
+.module-content {
+  padding-top: var(--nav-height);
+  width: 100%;
+  max-width: 2560px;
+  height: var(--content-height);
+  position: relative;
+}
+
+.heroes {
+  border-bottom: 1.2rem solid #fff;
+}
+
+.hero-grid {
+  max-width: 2560px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: var(--gutter-width);
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+.headline {
+  font-size: 5.6rem;
+  line-height: 1.07143;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+@media only screen and (max-width: 1068px) {
+  .headline {
+    font-size: 4.8rem;
+  }
+}
+
+.theme-dark h1,
+.theme-dark h2,
+.theme-dark h3,
+.theme-dark h4,
+.theme-dark h5,
+.theme-dark h6 {
+  color: #ffffff;
+}
+
+.subhead {
+  margin-top: 0.6rem;
+  font-size: 2.8rem;
+  line-height: 1.10722;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}
+
+@media only screen and (max-width: 1068px) {
+  .subhead {
+    font-size: 2.4rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Unit Copy */
+
+.unit-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: var(--content-height);
+  overflow: hidden;
+  position: relative;
+  top: -44px;
+}
+
+.unit-copy-wrapper {
+  z-index: 4;
+  padding-top: 55px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1068px) {
+  .unit-copy-wrapper {
+    padding-top: 61px;
+  }
+}
+
+/* Unit Image */
+.unit-wrapper .unit-image-wrapper {
+  z-index: 1;
+  overflow: visible;
+  flex-grow: 1;
+}
+
+.unit-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.unit-image {
+  z-index: 1;
+  position: absolute;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  left: calc(50% + 0px);
+  right: auto;
+  top: -44px;
+  transform: translatex(-50%);
+}
+
+/* UNit Image unit-image-iphone-14-pro-hero-iphone14pro-spring */
+
+.unit-image.unit-image-iphone-14-pro-hero-iphone14pro-spring {
+  width: 3008px;
+  height: 736px;
+  background-size: 3008px 736px;
+  background-repeat: no-repeat;
+  background-image: url("/APPLE.com/images/units/hero_iphone14pro_spring__9xo85pm6sbmm_largetall.jpg");
+}
+
+@media screen and (max-width: 1068px) {
+  .unit-image.unit-image-iphone-14-pro-hero-iphone14pro-spring {
+    width: 1068px;
+    height: 694px;
+    background-size: 1068px 694px;
+    background-repeat: no-repeat;
+    background-image: url("/APPLE.com/images/units/hero_iphone14pro_spring__9xo85pm6sbmm_mediumtall.jpg");
+  }
+}
